@@ -1,0 +1,16 @@
+{
+  "canisters": {
+    "minting_cycles_backend": {
+      "main": "src/minting_cycles_backend/main.mo",
+      "type": "motoko"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
