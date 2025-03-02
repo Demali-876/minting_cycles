@@ -11,10 +11,12 @@ To mint cycles for a canister, the process involves two main steps:
 ### **Process Flow**
 
 ```mermaid
-graph TD;
-    A[Send ICP to CMC] -->|Returns block index| B[Receive block index];
-    B --> |Send block index & canister ID to CMC| C[CMC converts ICP to cycles];
-    C --> |Cycles credited to canister| D[Canister receives cycles];
+sequenceDiagram
+    User->>Ledger: Send ICP to CMC via Ledger
+    Ledger-->>User: Return block index
+    User->>CMC: Send block index and canister ID
+    CMC->>Canister: Mint cycles
+    CMC-->>User: Confirm cycles minted
 ```
 
 ## **Project Structure**
